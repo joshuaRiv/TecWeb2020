@@ -45,12 +45,12 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body" style="margin: 10px 45px 20px;">
-          <form class="form-signin">
+          <form action="php/login.php" method="post" class="form-signin">
             <img class="mb-4" src="img/logo1.png" alt="" width="80" height="80">
             <h1 class="h3 mb-3 font-weight-normal">CineBuap</h1>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="required" autofocus="" style="margin-top: 30px" />
-            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="required" />
-            <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin: 30px 0 20px;">Iniciar sesión</button>
+            <input type="email" id="inputEmail" name="correo" class="form-control" placeholder="Correo electrónico" required="" autofocus="" style="margin-top: 30px">
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Contraseña" required="">
+            <button class="btn btn-lg btn-primary btn-block" id="entrarSistema" type="submit" style="margin: 30px 0 20px;">Iniciar sesión</button>
             <a href="RecuperarContrasena/recuperarContrasena.html">Olvidé mi contraseña</a><br>
           </form>
         </div>
@@ -373,5 +373,4 @@
     </div>
   </div>
 </body>
-
 </html>
