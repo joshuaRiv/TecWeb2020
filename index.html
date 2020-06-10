@@ -77,12 +77,21 @@
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
               <h2 style="text-align: left;font-weight: 600;">Paso 1: Crea tu cuenta</h2>
+               <p>
+                <b>Foto de perfil</b>
+                <input type="file" id="inputImg" class="form-control" placeholder="Foto"  style="margin-top: 30px" oninput="this.className = 'form-control'" name="foto" />
+              </p>
+              <p>
+                <input type="text" id="inputName" class="form-control" placeholder="Nombre" required="required" style="margin-top: 30px" oninput="this.className = 'form-control'" name="nombre" />
+              </p>
+              
               <p>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="required" style="margin-top: 30px" oninput="this.className = 'form-control'" name="Correo" />
               </p>
               <p>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="required" oninput="this.className = 'form-control'" name="Contra" />
               </p>
+
             </div>
             <div class="tab">
               <h2 style="text-align: left;font-weight: 600;">Paso 2: Información de pago</h2>
