@@ -6,7 +6,6 @@ $(document).ready(function() {
   var buscar = $('#buscar');
 
   buscar.click(function() {
-    //alert("tabla torneos");
     var espera = 200;
     $.ajax({
       url: "../Buscar/buscar.html",
@@ -28,7 +27,7 @@ $(document).ready(function() {
     //alert("tabla torneos");
     var espera = 200;
     $.ajax({
-      url: "../admiTorneos/tablaTorneos.html",
+      url: "../Home/home.html",
       beforeSend: function() {
         contenedor.text('Cargando...');
       },
@@ -39,4 +38,74 @@ $(document).ready(function() {
       }
     });
   });
+
+  var series = $('#series');
+
+  series.click(function() {
+    //alert("tabla torneos");
+    var espera = 200;
+    $.ajax({
+      url: "../Peliculas-series/serie.html",
+      beforeSend: function() {
+        contenedor.text('Cargando...');
+      },
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+        }, espera);
+      }
+    });
+  });
+
+  var pelis = $('#pelis');
+
+  pelis.click(function() {
+    //alert("tabla torneos");
+    var espera = 200;
+    $.ajax({
+      url: "../Peliculas-series/pelicula.html",
+      beforeSend: function() {
+        contenedor.text('Cargando...');
+      },
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+        }, espera);
+      }
+    });
+  });
+
+  var config = $('#config');
+
+  config.click(function() {
+    alert("tabla torneos");
+    var espera = 200;
+    $.ajax({
+      url: "../config/configuracion.html",
+      beforeSend: function() {
+        contenedor.text('Cargando...');
+      },
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+        }, espera);
+      }
+    });
+  });
+
+  function inicio() {
+    $.ajax({
+      url: "../Home/home.html",
+      beforeSend: function() {
+        contenedor.text('Cargando...');
+      },
+      success: function(datos) {
+        setTimeout(function() {
+          contenedor.html(datos);
+        });
+      }
+    });
+  }
+  inicio();
+
 });
