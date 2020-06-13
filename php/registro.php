@@ -26,6 +26,7 @@
 
 			if(mysqli_num_rows($result) > 0){
 				return 1;
+				echo '<script type="text/javascript">alert("El correo ya fue registrado");</script>';
 			}else{
 				return 0;
 			}

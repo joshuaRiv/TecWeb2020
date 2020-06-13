@@ -28,6 +28,15 @@ body {
   background-color: transparent !important;
 }
 
+.blackout {
+  background-color: #15171a;
+  color: white;
+}
+
+.blackout .navbarProf {
+  background-color: transparent !important;
+}
+
 .text-block {
   position: absolute;
   top: 35%;
@@ -132,7 +141,7 @@ input.invalid {
 
 /*Cómo centrar cosas verticalmente*/
 .padre {
-  padding: 7% 0;
+  padding: 10% 0;
 }
 
 .centrado {
@@ -143,15 +152,22 @@ input.invalid {
 .sideElement {
   border: none !important;
   margin: 35px 0;
-  color: #535353 !important;
+  color: #333333 !important;
   background-color: #1a1d20 !important;
+}
+
+.sideElement:hover {
+  border: none !important;
+  margin: 35px 0;
+  color: #333333 !important;
+  background-color: #2F3336 !important;
 }
 
 .sideElementActive {
   border: none !important;
   margin: 35px 0;
   color: white !important;
-  background-color: #1a1d20 !important;
+  background-color: #2F3336 !important;
 }
 
 /*---------------- Movie carousel -----------------*/
@@ -217,6 +233,51 @@ input[class*="entry"]::placeholder {
   max-width: 270px;
 }
 
+.grid-item:hover {
+  -webkit-filter: brightness(60%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.grid-container2 {
+  padding: 0 auto;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  grid-column-gap: auto;
+  grid-gap: 25px;
+  margin: 40px 25%;
+  justify-content: center;
+}
+
+.grid-item2 img {
+  /*padding: 20px;*/
+  font-size: 30px;
+  text-align: center;
+  min-height: 160px;
+  max-height: 160px;
+  min-width: 160px;
+  max-width: 160px;
+}
+
+.grid-item2:hover {
+  -webkit-filter: brightness(40%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.profiles {
+  margin-top: 15%;
+}
+
 /*home css*/
 /* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
 .contenedor-titulo-controles {
@@ -246,7 +307,7 @@ input[class*="entry"]::placeholder {
 
 /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
 .peliculas-recomendadas {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .peliculas-recomendadas .contenedor-principal {
@@ -311,4 +372,38 @@ input[class*="entry"]::placeholder {
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
   width: 100%;
   vertical-align: top;
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.peliculaBig img {
+  min-height: 225px;
+  max-height: 225px;
+  transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculaBig:hover {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.pelicula:hover {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btnPerfil {
+  background-color: transparent;
+  border: none;
 }
