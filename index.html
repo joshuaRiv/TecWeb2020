@@ -65,7 +65,7 @@
     </div>
   </div>
   <!-- Vertically centered modal -->
-  <div class="modal fade" id="CrearCuenta">
+  <div class="modal fade" id="CrearCuenta" style="color: black !important">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header" style="border:none;">
@@ -75,7 +75,7 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <form id="regForm" action="/action_page.php">
+          <form id="regForm" action="php/registro.php" method="POST">
             <!-- Circles which indicates the steps of the form: -->
             <div style="text-align:center;">
               <span class="step"></span>
@@ -116,7 +116,7 @@
               </p>
               <p class="form-inline">
                 Expiración:
-                <select id="mes" style="max-width: 25%; margin-left: 10px" class="form-control">
+                <select id="mes" name="mes" style="max-width: 25%; margin-left: 10px" class="form-control">
                   <option value="01">01</option>
                   <option value="02">02</option>
                   <option value="03">03</option>
@@ -131,7 +131,7 @@
                   <option value="12">12</option>
                 </select>
                 /
-                <select id="anio" style="max-width: 25%;margin-right: 70px" class="form-control">
+                <select id="anio" name="anio" style="max-width: 25%;margin-right: 70px" class="form-control">
                   <option value="20">20</option>
                   <option value="21">21</option>
                   <option value="22">22</option>

@@ -1,6 +1,6 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
-  color: white;
+  
 }
 
 html {}
@@ -275,7 +275,7 @@ input[class*="entry"]::placeholder {
 }
 
 .profiles {
-  margin-top: 15%;
+  margin-top: 7%;
 }
 
 /*home css*/

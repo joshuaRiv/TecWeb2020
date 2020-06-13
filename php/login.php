@@ -16,6 +16,7 @@
 			$sql1="SELECT nombre from usuario where correo='$correo' and password='$pass'";
 			echo "$sql1";
 			echo 1;
+			header('Location: ../Principal/selectProfile.html');
 		}else{
 			echo 0;
 		}

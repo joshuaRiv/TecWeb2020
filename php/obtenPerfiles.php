@@ -2,7 +2,7 @@
   session_start();
   $correo = $_SESSION['user'];
 
-  $mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'xamppadampa');
+  $mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'EISA1997');
   $mbd->exec("SET NAMES 'utf8';");
 
 
@@ -11,14 +11,11 @@
   $stmt = $mbd->prepare($query);
   $stmt->execute();
       
-  $res=array();
-  while ($row=$stmt->fetch(PDO::FETCH_OBJ)){
-    $res[]=array(
-      "id"=> $row->id_usuario,
-    );
-  }
+  while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $res = $row['id_usuario'];
+            }
 
-  $query ="SELECT nombre from perfiles where perfiles.id_usuario='$res[0]'";
+  $query ="SELECT nombre from perfiles where id_usuario='$res'";
   $stmt = $mbd->prepare($query);
   $stmt->execute();
 

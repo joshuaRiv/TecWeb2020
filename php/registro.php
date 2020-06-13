@@ -5,31 +5,44 @@
 
 		
 		$nombre=$_POST['nombre'];
-		$correo=$_POST['correo'];
-		$pass=sha1($_POST['password']);
-		$foto=$_POST['foto']
-		$cc=$_POST['cc']
+		$correo=$_POST['Correo'];
+		$pass=$_POST['Contra'];
+		$foto=$_POST['foto'];
+		
 
-		if(buscaRepetido($correo,$password,$conexion)==1){
+		$propietario=$_POST['propietario'];
+		$tarjeta=$_POST['creditcard'];
+		$mes=$_POST['mes'];
+		$anio=$_POST['anio'];
+		$fecha_exp=$mes.'/'.$anio;
+		$cvv=$_POST['cvv'];
+
+		if(buscaRepetido($correo,$pass,$conexion)==1){
 			echo 2;
 		}else{
-			$sql="INSERT into usuario ( ,correo,password,nombre,foto,cc)
-				values (,'$correo','$pass','$nombre','$foto','$cc')";
+			$sql="INSERT into usuario (id_usuario ,correo,password,nombre,foto)
+				values ('','$correo','$pass','$nombre','$foto')";
 			echo $result=mysqli_query($conexion,$sql);
+			$id=mysqli_insert_id($conexion);
 		}
+		
+		$sql1="INSERT into tarjeta (id_usuario ,nombre_propietario,num_tarjeta,fecha_exp,cv)
+				values ('$id','$propietario','$tarjeta','$fecha_exp','$cvv')";
+			echo $result=mysqli_query($conexion,$sql1);
 
 
-		function buscaRepetido($user,$pass,$conexion){
+		function buscaRepetido($correo,$pass,$conexion){
 			$sql="SELECT * from usuario 
 				where correo='$correo' and password='$pass'";
 			$result=mysqli_query($conexion,$sql);
 
 			if(mysqli_num_rows($result) > 0){
 				return 1;
-				echo '<script type="text/javascript">alert("El correo ya fue registrado");</script>';
 			}else{
 				return 0;
 			}
 		}
+
+		echo "<script type='text/javascript'>window.location.href = '../index.html';</script>";
 
  ?>

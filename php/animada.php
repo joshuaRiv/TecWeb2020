@@ -1,5 +1,5 @@
 <?php 
-$mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'xamppadampa');
+$mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'EISA1997');
   $mbd->exec("SET NAMES 'utf8';");
 
   $query ="SELECT id_categoria, nombre , portada FROM peliculas WHERE id_categoria = 5 UNION SELECT id_categoria, nombre , portada FROM programas WHERE id_categoria = 5";

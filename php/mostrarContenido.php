@@ -1,7 +1,7 @@
 <?php 
 	// require_once "conexion.php";
 
-	$mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'xamppadampa');
+	$mbd = new PDO('mysql:host=localhost;dbname=neflis', 'root', 'EISA1997');
   $mbd->exec("SET NAMES 'utf8';");
 
   $query ="SELECT nombre , portada FROM peliculas UNION SELECT nombre , portada FROM programas";
